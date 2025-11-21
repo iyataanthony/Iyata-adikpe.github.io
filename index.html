@@ -1,11 +1,75 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Welcome</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>REPLACE_NAME — Portfolio</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; padding:0; background:#f7fafc; color:#0f172a; }
+    .wrap { max-width:860px; margin:48px auto; background:white; padding:28px; border-radius:12px; box-shadow:0 6px 20px rgba(12, 20, 40, 0.06); }
+    header { display:flex; gap:18px; align-items:center; }
+    .photo { width:96px; height:96px; border-radius:12px; background:#e2e8f0; display:flex; align-items:center; justify-content:center; font-weight:600; color:#475569; }
+    h1 { margin:0; font-size:28px; }
+    p.lead { margin:6px 0 16px 0; color:#475569; }
+    .section { margin-top:18px; }
+    .links a { display:inline-block; margin-right:12px; text-decoration:none; padding:8px 12px; border-radius:8px; background:#eef2ff; color:#3730a3; font-weight:600; }
+    ul { margin:6px 0 0 18px; }
+    footer { margin-top:26px; color:#64748b; font-size:14px; }
+    .skills { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .skill { padding:6px 8px; background:#f1f5f9; border-radius:999px; font-size:13px; color:#0f172a; }
+  </style>
 </head>
 <body>
-  <h1>Hello! Your website is working 🎉</h1>
-  <p>You can now edit this page.</p>
+  <div class="wrap">
+    <header>
+      <div class="photo" id="photo">RE</div>
+      <div>
+        <h1 id="name">REPLACE_NAME</h1>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <div style="font-weight:600; color:#0f172a;" id="headline">REPLACE_HEADLINE</div>
+        </div>
+        <p class="lead" id="summary">REPLACE_SHORT_SUMMARY</p>
+        <div class="links">
+          <a href="REPLACE_LINKEDIN_URL" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="section">
+      <h3>Experience</h3>
+      <ul id="experience">
+        <li><strong>REPLACE_ROLE_1</strong> — REPLACE_ROLE_1_DESC</li>
+        <li><strong>REPLACE_ROLE_2</strong> — REPLACE_ROLE_2_DESC</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Skills</h3>
+      <div class="skills" id="skills">
+        <span class="skill">REPLACE_SKILL_1</span>
+        <span class="skill">REPLACE_SKILL_2</span>
+        <span class="skill">REPLACE_SKILL_3</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Contact</h3>
+      <p>Prefer to be contacted via LinkedIn: <a href="REPLACE_LINKEDIN_URL" target="_blank" rel="noopener">My LinkedIn profile</a></p>
+    </div>
+
+    <footer>
+      <div>Built with GitHub Pages • <span id="year"></span></div>
+    </footer>
+  </div>
+
+  <script>
+    // Sets initials in the photo box automatically from the name
+    (function(){
+      var name = document.getElementById('name').textContent.trim();
+      var initials = name.split(' ').filter(Boolean).slice(0,2).map(s=>s[0]?.toUpperCase()||'').join('');
+      document.getElementById('photo').textContent = initials || 'ME';
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
