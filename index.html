@@ -8,7 +8,14 @@
     :root{--accent:#4a4aff;--muted:#6b7280;--bg:#f7f8fb}
     *{box-sizing:border-box}
     body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#0f172a;line-height:1.5}
-    header{background:linear-gradient(90deg,var(--accent),#6f7bff);color:#fff;padding:48px 20px 56px;border-bottom-left-radius:40px;border-bottom-right-radius:40px}
+    header{
+  background:linear-gradient(90deg, var(--accent), #6789ff);
+  color:#fff;
+  padding:32px 20px 40px; /* reduced height */
+  border-bottom-left-radius:40px;
+  border-bottom-right-radius:40px;
+}
+
     .container{max-width:1000px;margin:0 auto;padding:20px}
     nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:12px}
     nav a{color:rgba(255,255,255,0.95);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
@@ -43,41 +50,53 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="hero">
-        <img src="1727691947865.jpg"
-     alt="Iyata Anthony"
-     width="120"
-     height="120"
-     style="border-radius:999px;object-fit:cover;background:#fff"/>
+  <div class="container hero">
+      <img src="1727691947865.jpg"
+           alt="Iyata Anthony"
+           width="120"
+           height="120"
+           style="border-radius:999px;object-fit:cover;">
 
+      <div>
         <h1>Iyata Anthony</h1>
-        <p class="meta">Researcher • Podcaster • Product-minded professional</p>
-        <div class="section-links">
-          <a class="btn" href="#contact">Contact</a>
-          <a class="download" href="#cv">Download CV</a>
-        </div>
+        <p class="meta">Researcher • Podcaster • Product Analyst</p>
       </div>
-      <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#podcast">Podcast</a>
-        <a href="#cv">CV</a>
-        <a href="#work">Work</a>
-        <a href="#skills">Technical Skills</a>
-        <a href="#business">Business</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#licenses">Licenses</a>
-        <a href="#courses">Courses</a>
-        <a href="#volunteering">Volunteering</a>
-        <a href="#honors">Honors</a>
-        <a href="#blog">Blog</a>
-      </nav>
+  </div>
+
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#podcast">Podcast</a>
+    <a href="#cv">CV</a>
+
+    <!-- Work Experience with CV sub-section -->
+    <div class="dropdown">
+      <a href="#work">Work Experience ▾</a>
+      <div class="dropdown-content">
+        <a href="academic-cv.pdf">Academic CV</a>
+        <a href="professional-cv.pdf">Professional CV</a>
+      </div>
     </div>
-  </header>
+
+    <a href="#skills">Technical Skills</a>
+    <a href="#business">Business</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#licenses">Licenses</a>
+    <a href="#courses">Courses</a>
+    <a href="#volunteering">Volunteering</a>
+    <a href="#honors">Honors</a>
+    <a href="#blog">Blog</a>
+    <a href="#hobbies">Hobbies</a>
+
+    <!-- MOVED to navigation -->
+    <a href="#contact">Contact</a>
+    <a href="#cv" class="download">Download CV</a>
+  </nav>
+</header>
+
 
   <main class="container">
     <section id="home" class="card">
