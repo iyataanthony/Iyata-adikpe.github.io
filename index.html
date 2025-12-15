@@ -219,6 +219,88 @@ footer{
   height: 24px;
   object-fit: contain;
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Site Title</title>
+
+  <!-- ✅ CSS STARTS HERE -->
+  <style>
+
+    /* Publications CSS */
+    .publications-section {
+      margin-top: 30px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .publication-card {
+      border-bottom: 1px solid #e6e6e6;
+      padding: 20px 0;
+    }
+
+    .publication-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .publication-meta {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .publication-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border: 1.5px solid #333;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #000;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      margin-bottom: 12px;
+    }
+
+    .publication-btn:hover {
+      background-color: #f3f3f3;
+    }
+
+    .arrow {
+      font-size: 14px;
+    }
+
+    .publication-desc {
+      font-size: 14px;
+      color: #444;
+    }
+
+  </style>
+  <!-- ✅ CSS ENDS HERE -->
+
+</head>
+
+<body>
+
+  <!-- ✅ YOUR CURVED BODY CONTAINER -->
+  <div class="main-container">
+
+    <!-- 🔽 PASTE THE PUBLICATIONS HTML HERE -->
+    <!-- (the <section class="publications-section">...</section>) -->
+
+  </div>
+
+</body>
+</html>
 
 </style>
 </head>
@@ -460,6 +542,58 @@ Jan 2018 - Oct 2018</p>
   <span class="li-close" onclick="closeCert()">&times;</span>
   <img id="certImage" class="li-modal-img">
 </div>
+  <section class="publications-section">
+  <h2 class="section-title">Publications</h2>
+
+  <!-- Publication 1 -->
+  <div class="publication-card">
+    <h3 class="publication-title">
+      The Enterprise Architecture (EA) Practice – An Analysis of EA Models for Different Organisational Contexts
+    </h3>
+
+    <p class="publication-meta">
+      Enterprise Architecture Professional Journal (EAPJ) · Apr 6, 2024
+    </p>
+
+    <a
+      href="https://eapj.org/the-enterprise-architecture-ea-practice-an-analysis-of-ea-models-for-different-organisational-contexts/"
+      target="_blank"
+      class="publication-btn"
+    >
+      Show publication
+      <span class="arrow">↗</span>
+    </a>
+
+    <p class="publication-desc">
+      This research studies three broad Enterprise Architecture (EA) implementation models in enterprises...
+    </p>
+  </div>
+
+  <!-- Publication 2 -->
+  <div class="publication-card">
+    <h3 class="publication-title">
+      Towards Fostering the Growth of Operations Research in Nigeria: The Role of Computer Scientists
+    </h3>
+
+    <p class="publication-meta">
+      American Journal of Operational Research · Nov 14, 2018
+    </p>
+
+    <a
+      href="http://article.sapub.org/10.5923.j.ajor.20180801.01.html"
+      target="_blank"
+      class="publication-btn"
+    >
+      Show publication
+      <span class="arrow">↗</span>
+    </a>
+
+    <p class="publication-desc">
+      Operations Research (OR) is an interdisciplinary field that finds its roots in applied mathematics...
+    </p>
+  </div>
+</section>
+
 
 
 <section id="post">
